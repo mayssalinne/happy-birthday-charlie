@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#a9617f" />
+  <title>Happy Birthday, Charlie</title>
+  <meta name="description" content="A birthday letter for Charlie, from Alinne." />
+
+  <!-- Fonts: Bodoni Moda (didone display), Pinyon Script (calligraphy),
+       Cormorant Garamond (letter text), Courier Prime (postal labels) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Courier+Prime:wght@400;700&family=Pinyon+Script&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23a8131e' d='M50 88C20 64 6 47 12 29 18 13 40 11 50 29 60 11 82 13 88 29 94 47 80 64 50 88Z'/%3E%3C/svg%3E" />
+</head>
+
+<body class="is-locked">
+
+  <!-- Reusable line-art drawings (referenced below with <use href="#...">) -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-bow" viewBox="0 0 120 92">
+      <g style="fill: var(--bow-fill, none)" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M57 39C51 53 46 64 33 86l8.5-2.5 4 7.5C53 70 57 56 60.5 42Z" />
+        <path d="M63 39C69 53 74 64 87 86l-8.5-2.5-4 7.5C67 70 63 56 59.5 42Z" />
+        <path d="M60 34C50 19 34 7 19 9 7 11 5 26 13 34c9 9 30 7 47 0Z" />
+        <path d="M60 34C70 19 86 7 101 9c12 2 14 17 6 25-9 9-30 7-47 0Z" />
+        <path d="M23 17c10 2 22 8 31 15M97 17c-10 2-22 8-31 15" fill="none" opacity=".6" />
+        <rect x="52.5" y="27" width="15" height="14" rx="5.5" />
+      </g>
+    </symbol>
+
+    <symbol id="i-cherries" viewBox="0 0 100 100">
+      <g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M54 8C48 26 38 44 30 64" />
+        <path d="M54 8c4 20 10 36 18 54" />
+        <path d="M54 8c10-8 24-8 32 0-10 6-22 6-32 0Z" />
+        <path d="M58 7c8-1 16-1 24 0" opacity=".6" />
+      </g>
+      <circle cx="28" cy="74" r="14" fill="currentColor" />
+      <circle cx="72" cy="72" r="14" fill="currentColor" />
+      <path d="M21 68c2-4 5-6 9-6M65 66c2-4 5-6 9-6" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" opacity=".75" />
+    </symbol>
+
+    <symbol id="i-heart" viewBox="0 0 100 100">
+      <path d="M50 88C20 64 6 47 12 29 18 13 40 11 50 29 60 11 82 13 88 29 94 47 80 64 50 88Z" />
+    </symbol>
+
+    <symbol id="i-heart-line" viewBox="0 0 100 100">
+      <path d="M50 86C21 63 8 47 13 30 18 15 39 12 50 30 61 12 82 15 87 30 92 47 79 63 50 86Z" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round" />
+    </symbol>
+
+    <symbol id="i-cake" viewBox="0 0 160 140">
+      <g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <ellipse cx="80" cy="124" rx="66" ry="10" />
+        <path d="M28 120V88c0-6 24-10 52-10s52 4 52 10v32" />
+        <path d="M28 90c8 8 18 8 26 0 8 8 18 8 26 0 8 8 18 8 26 0 8 8 18 8 26 0" />
+        <path d="M46 80V56c0-5 15-8 34-8s34 3 34 8v24" />
+        <path d="M46 58c6 6 11 6 17 0 6 6 11 6 17 0 6 6 11 6 17 0 6 6 11 6 17 0" />
+        <path d="M80 40c-7-6-12-10-12-16 0-5 6-8 12-2 6-6 12-3 12 2 0 6-5 10-12 16Z" />
+        <path d="M60 46c-4-4-7-6-7-10 0-3 4-5 7-1 3-4 7-2 7 1 0 4-3 6-7 10ZM100 46c-4-4-7-6-7-10 0-3 4-5 7-1 3-4 7-2 7 1 0 4-3 6-7 10Z" />
+        <path d="M44 108c-3-3-5-4-5-7 0-2 3-3 5-1 2-2 5-1 5 1 0 3-2 4-5 7ZM80 110c-3-3-5-4-5-7 0-2 3-3 5-1 2-2 5-1 5 1 0 3-2 4-5 7ZM116 108c-3-3-5-4-5-7 0-2 3-3 5-1 2-2 5-1 5 1 0 3-2 4-5 7Z" />
+        <path d="M62 72c-2-2-4-3-4-5 0-2 2-3 4-1 2-2 4-1 4 1 0 2-2 3-4 5ZM98 72c-2-2-4-3-4-5 0-2 2-3 4-1 2-2 4-1 4 1 0 2-2 3-4 5Z" />
+      </g>
+    </symbol>
+
+    <symbol id="i-sparkle" viewBox="0 0 40 40">
+      <path d="M20 2c1.6 9 4.4 13.8 18 18-13.6 4.2-16.4 9-18 18-1.6-9-4.4-13.8-18-18 13.6-4.2 16.4-9 18-18Z" />
+    </symbol>
+
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z" /></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6" y="5" width="4.2" height="14" rx="1.2" /><rect x="13.8" y="5" width="4.2" height="14" rx="1.2" /></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></symbol>
+  </svg>
+
+  <a class="skip-link" href="#letter">Skip to the letter</a>
+
+  <!-- =====================================================================
+       1 · OPENING — the envelope
+       ===================================================================== -->
+  <div class="opening" id="opening" role="dialog" aria-modal="true" aria-labelledby="opening-name">
+    <div class="opening__frame" data-scallop-frame aria-hidden="true"></div>
+
+    <div class="opening__inner">
+      <p class="opening__greeting" data-content="opening.greeting"></p>
+      <h1 class="opening__name" id="opening-name" data-content="to"></h1>
+      <p class="opening__intro" data-content="opening.intro"></p>
+
+      <div class="envelope" id="envelope">
+        <div class="envelope__back"></div>
+        <div class="envelope__card" aria-hidden="true">
+          <span class="envelope__card-script">for you</span>
+          <svg class="envelope__card-bow"><use href="#i-bow" /></svg>
+        </div>
+        <div class="envelope__pocket">
+          <div class="envelope__address">
+            <span class="postal-label">To:</span> <span class="envelope__line" data-content="to"></span>
+            <span class="postal-label">From:</span> <span class="envelope__line" data-content="from"></span>
+          </div>
+        </div>
+        <p class="envelope__route postal-label">
+          Air mail · <span data-content="fromPlace"></span> &rarr; <span data-content="toPlace"></span>
+        </p>
+        <div class="envelope__flap"><div class="envelope__flap-inner"></div></div>
+
+        <button class="envelope__seal" id="open-letter" type="button">
+          <span class="pixel-art" data-pixel="heart" aria-hidden="true"></span>
+          <span class="visually-hidden" data-content="opening.button"></span>
+        </button>
+
+        <div class="stamp stamp--a" aria-hidden="true">
+          <div class="stamp__inner">
+            <span class="pixel-art" data-pixel="bow"></span>
+            <span class="stamp__text">24 · XII</span>
+          </div>
+        </div>
+        <div class="stamp stamp--b" aria-hidden="true">
+          <div class="stamp__inner">
+            <svg class="stamp__icon"><use href="#i-cherries" /></svg>
+          </div>
+        </div>
+      </div>
+
+      <button class="opening__cta" type="button" data-open>
+        <span data-content="opening.button"></span>
+      </button>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- =================================================================
+         2 · THE LETTER
+         ================================================================= -->
+    <section class="section section--letter" id="letter" aria-labelledby="letter-title">
+      <div class="letter reveal">
+        <div class="letter__frame" data-ribbon-frame data-ribbon-color="var(--cherry)" aria-hidden="true"></div>
+        <svg class="letter__bow" aria-hidden="true"><use href="#i-bow" /></svg>
+        <svg class="letter__spark letter__spark--1" aria-hidden="true"><use href="#i-sparkle" /></svg>
+        <svg class="letter__spark letter__spark--2" aria-hidden="true"><use href="#i-sparkle" /></svg>
+
+        <header class="letter__head">
+          <svg class="letter__cake" aria-hidden="true"><use href="#i-cake" /></svg>
+          <h2 class="display-title" id="letter-title">
+            <span class="swash">H</span>appy <br /><span class="swash">B</span>irthday
+          </h2>
+          <p class="postal-label letter__meta">
+            <span data-content="birthdayLabel"></span> · <span data-content="fromPlace"></span> &rarr; <span data-content="toPlace"></span>
+          </p>
+        </header>
+
+        <article class="letter__body">
+          <p class="letter__salutation" data-content="letter.salutation"></p>
+          <div class="letter__text" id="letter-text"></div>
+          <p class="letter__closing" data-content="letter.closing"></p>
+          <p class="letter__signature" data-content="letter.signature"></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         3 · A LITTLE MUSEUM OF US
+         ================================================================= -->
+    <section class="section section--museum" id="museum" aria-labelledby="museum-title">
+      <header class="museum-head reveal">
+        <p class="postal-label museum-head__eyebrow">Est. October 2, 2026 · Free admission</p>
+        <h2 class="museum-title" id="museum-title" data-content="museum.title"></h2>
+        <p class="section-intro" data-content="museum.intro"></p>
+      </header>
+
+      <!-- No. 01 — the two candles -->
+      <article class="exhibit exhibit--feature reveal" aria-labelledby="ex1-title">
+        <div class="feature-card" id="feature-card">
+          <span class="pixel-art feature-card__corner feature-card__corner--tl" data-pixel="flourish" aria-hidden="true"></span>
+          <span class="pixel-art feature-card__corner feature-card__corner--tr" data-pixel="flourish" aria-hidden="true"></span>
+          <span class="pixel-art feature-card__corner feature-card__corner--bl" data-pixel="flourish" aria-hidden="true"></span>
+          <span class="pixel-art feature-card__corner feature-card__corner--br" data-pixel="flourish" aria-hidden="true"></span>
+
+          <button class="candles" id="candles" type="button" aria-pressed="false">
+            <span class="candle candle--a">
+              <span class="candle__flame" aria-hidden="true"></span>
+              <span class="candle__wick" aria-hidden="true"></span>
+              <span class="candle__body" aria-hidden="true"></span>
+              <span class="candle__name" data-content="museum.candles.leftName"></span>
+              <span class="candle__city" data-content="toPlace"></span>
+            </span>
+            <span class="candles__date" aria-hidden="true">24 · XII</span>
+            <span class="candle candle--b">
+              <span class="candle__flame" aria-hidden="true"></span>
+              <span class="candle__wick" aria-hidden="true"></span>
+              <span class="candle__body" aria-hidden="true"></span>
+              <span class="candle__name" data-content="museum.candles.rightName"></span>
+              <span class="candle__city" data-content="fromPlace"></span>
+            </span>
+          </button>
+          <p class="candles__prompt" id="candles-prompt" aria-live="polite" data-content="museum.candles.prompt"></p>
+        </div>
+
+        <div class="museum-label museum-label--wide">
+          <p class="museum-label__no" data-content="museum.candles.number"></p>
+          <h3 class="museum-label__title" id="ex1-title" data-content="museum.candles.title"></h3>
+          <p class="museum-label__medium" data-content="museum.candles.medium"></p>
+          <p class="museum-label__text" data-content="museum.candles.text"></p>
+        </div>
+      </article>
+
+      <div class="gallery">
+        <!-- No. 02 — calendar page -->
+        <article class="exhibit reveal" aria-labelledby="ex2-title">
+          <div class="frame"><div class="frame__inner">
+            <div class="calendar" id="calendar" aria-label="Calendar page: October 2026, with the 2nd circled"></div>
+          </div></div>
+          <div class="museum-label">
+            <p class="museum-label__no" data-content="museum.calendar.number"></p>
+            <h3 class="museum-label__title" id="ex2-title" data-content="museum.calendar.title"></h3>
+            <p class="museum-label__medium" data-content="museum.calendar.medium"></p>
+            <p class="museum-label__text" data-content="museum.calendar.text"></p>
+          </div>
+        </article>
+
+        <!-- No. 03 — the tipped king -->
+        <article class="exhibit reveal" aria-labelledby="ex3-title">
+          <div class="frame"><div class="frame__inner">
+            <button class="king" id="king" type="button" aria-pressed="false">
+              <svg class="king__piece" viewBox="0 0 60 120" aria-hidden="true">
+                <g fill="#fffaf4" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
+                  <path d="M30 4v16M23 11h14" fill="none" />
+                  <path d="M24 30v-8h12v8" />
+                  <path d="M19 48c-6-6-3-16 11-18 14 2 17 12 11 18Z" />
+                  <path d="M16 48h28v5H16Z" />
+                  <path d="M21 53c2 14 3 26 1 38h16c-2-12-1-24 1-38Z" />
+                  <path d="M15 91h30v6H15Z" />
+                  <path d="M11 104c0-5 4-7 8-7h22c4 0 8 2 8 7Z" />
+                  <path d="M6 104h48v10H6Z" />
+                </g>
+                <path d="M26 62v24M34 62v24" stroke="currentColor" stroke-width="1" opacity=".35" />
+              </svg>
+              <span class="king__board" aria-hidden="true"></span>
+              <span class="visually-hidden" data-content="museum.chess.prompt"></span>
+            </button>
+            <p class="frame__hint" id="king-hint" data-content="museum.chess.prompt"></p>
+          </div></div>
+          <div class="museum-label">
+            <p class="museum-label__no" data-content="museum.chess.number"></p>
+            <h3 class="museum-label__title" id="ex3-title" data-content="museum.chess.title"></h3>
+            <p class="museum-label__medium" data-content="museum.chess.medium"></p>
+            <p class="museum-label__text" data-content="museum.chess.text"></p>
+          </div>
+        </article>
+
+        <!-- No. 04 — the ticket -->
+        <article class="exhibit reveal" aria-labelledby="ex4-title">
+          <div class="frame"><div class="frame__inner">
+            <div class="ticket">
+              <div class="ticket__main">
+                <p class="ticket__kind">Admit one</p>
+                <p class="ticket__route"><span data-content="fromPlace"></span> <span class="ticket__arrow">&rarr;</span> <span data-content="toPlace"></span></p>
+                <dl class="ticket__rows">
+                  <div><dt>Date</dt><dd class="ticket__blank"></dd></div>
+                  <div><dt>Seat</dt><dd>Next to you</dd></div>
+                </dl>
+              </div>
+              <div class="ticket__stub" aria-hidden="true">
+                <span class="pixel-art" data-pixel="heart"></span>
+                <span>No. 0001</span>
+              </div>
+            </div>
+          </div></div>
+          <div class="museum-label">
+            <p class="museum-label__no" data-content="museum.ticket.number"></p>
+            <h3 class="museum-label__title" id="ex4-title" data-content="museum.ticket.title"></h3>
+            <p class="museum-label__medium" data-content="museum.ticket.medium"></p>
+            <p class="museum-label__text" data-content="museum.ticket.text"></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         4 · OUR PLAYLIST — record sleeve + liner notes
+         ================================================================= -->
+    <section class="section section--playlist" id="playlist" aria-labelledby="playlist-title">
+      <div class="album">
+        <div class="record-set reveal" id="record-set">
+          <div class="vinyl" id="vinyl" aria-hidden="true">
+            <div class="vinyl__label">
+              <span class="vinyl__side" data-content="playlist.side"></span>
+              <span class="pixel-art" data-pixel="heart"></span>
+              <span class="vinyl__track" id="vinyl-track">C &amp; A</span>
+            </div>
+          </div>
+          <div class="sleeve" aria-hidden="true">
+            <div class="sleeve__frame" data-ribbon-frame data-ribbon-color="#fbf4ec"></div>
+            <svg class="sleeve__bow"><use href="#i-bow" /></svg>
+            <svg class="sleeve__cherries"><use href="#i-cherries" /></svg>
+            <p class="sleeve__title">Our Playlist</p>
+            <p class="sleeve__meta"><span data-content="playlist.side"></span> · 5 songs</p>
+            <p class="sleeve__names"><span data-content="to"></span> &amp; <span data-content="from"></span></p>
+          </div>
+        </div>
+
+        <div class="liner reveal">
+          <div class="liner__frame" data-ribbon-frame data-ribbon-color="var(--rose)" aria-hidden="true"></div>
+          <header class="liner__head">
+            <p class="postal-label">Liner notes · <span data-content="birthdayLabel"></span></p>
+            <h2 class="liner__title" id="playlist-title"><span class="swash">O</span>ur <span class="swash">P</span>laylist</h2>
+            <p class="liner__intro" data-content="playlist.intro"></p>
+          </header>
+          <ol class="tracklist" id="tracklist"></ol>
+          <p class="liner__now" id="liner-now" aria-live="polite">Tap a song to put it on the turntable.</p>
+          <div class="spotify-player" id="spotify-player" hidden></div>
+          <a class="pill-link" id="full-playlist" href="#" target="_blank" rel="noopener" hidden>
+            Open the whole playlist <svg aria-hidden="true"><use href="#i-arrow" /></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         5 · FINAL MESSAGE
+         ================================================================= -->
+    <section class="section section--final" id="final" aria-labelledby="final-title">
+      <div class="lace reveal" id="lace">
+        <div class="lace__svg" data-lace aria-hidden="true"></div>
+        <div class="lace__content">
+          <p class="lace__kicker" data-content="final.kicker"></p>
+          <h2 class="lace__headline" id="final-title" data-content="final.headline"></h2>
+          <p class="lace__message" data-content="final.message"></p>
+          <p class="lace__signoff" data-content="final.signoff"></p>
+          <p class="lace__signature" data-content="final.signature"></p>
+        </div>
+      </div>
+
+      <footer class="ending reveal">
+        <svg class="ending__cherries" aria-hidden="true"><use href="#i-cherries" /></svg>
+        <p class="postal-label">
+          <span data-content="birthdayLabel"></span><br />
+          <span data-content="fromPlace"></span> &rarr; <span data-content="toPlace"></span>
+        </p>
+        <button class="ending__again" type="button" id="read-again">Read the letter again</button>
+      </footer>
+    </section>
+  </main>
+
+  <!-- content.js must load before script.js -->
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
